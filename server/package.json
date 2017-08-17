@@ -1,0 +1,21 @@
+{
+  "name": "push-notifications-server",
+  "version": "1.0.0",
+  "description": "Push notification Server.",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "UniMAP",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "firebase": "^4.1.2",
+    "web-push": "^3.0.0"
+  }
+}
+
