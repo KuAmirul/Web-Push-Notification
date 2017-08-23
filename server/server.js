@@ -15,7 +15,7 @@ var serviceAccount = require(" #directory# /serviceAccountKey.json");
 //refer to https://firebase.google.com/docs/admin/setup, replace # with respective database url
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: " # "
+    databaseURL: "#"
 });
 
 
