@@ -3,8 +3,8 @@ const webpush = require('web-push');
 var firebase = require('firebase');
 var admin = require("firebase-admin");
 var async = require('async');
-var oracledb = require('oracledb');
-oracledb.autoCommit = true;
+//var oracledb = require('oracledb');
+//oracledb.autoCommit = true;
 
 //enter the directory to the serviceAccountKey.json, replace the '\' with '/'
 //For example ("C:/server/serviceAccountKey.json") instead of ("C:\server\serviceAccountKey.json")
@@ -162,7 +162,7 @@ function sql() {
 
 }
 ///////////////////////////////////
-setTimeout(sql, 8000); //QUERY SQL
+//setTimeout(sql, 8000); //QUERY SQL
 
 
 // /*	
@@ -180,7 +180,7 @@ function send() {
             for (var j = 0; j < fblength; j++) {
                 //console.log(target[j]);
 
-                webpush.sendNotification(target[j], object[i])
+                webpush.sendNotification(target[j],"test")   //after installation of database, replace "test" with object[i]
                     .then(function(result) {
                         console.log(result)
                     }).catch(function(error) {
