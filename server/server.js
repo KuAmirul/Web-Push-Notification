@@ -73,7 +73,7 @@ function sql() {
     oracledb.getConnection({
             user: "#",
             password: "#",
-            connectString: "(DESCRIPTION = (LOAD_BALANCE = YES) (FAILOVER=ON) (ADDRESS = (PROTOCOL = TCP)(HOST = #)(PORT = 1521)) (ADDRESS = (PROTOCOL = TCP)(HOST = #)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED)      (SERVICE_NAME = #)    )  )"
+            connectString: "#"
         },
 
         function(err, connection) {
