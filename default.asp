@@ -34,7 +34,7 @@ SILA HUBUNGI 049798494/ 049798109 untuk aduan dan sebarang bantuan. Sistem x sia
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="styles/index.css">
+    <!--link rel="stylesheet" href="styles/index.css"-->
 
     <script>
         // Function to search values in table
