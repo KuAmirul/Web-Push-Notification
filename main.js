@@ -138,8 +138,6 @@ firebase.auth().onAuthStateChanged(function(user) {
                     console.log('User is subscribed.');
                     //console.log(JSON.stringify(subscription));
                     var target = subscription.toJSON();
-                    //document.getElementById("mytext").value = target;
-                    //console.log(JSON.stringify(sub));
                     //console.log(target);
                     var endpoint = target.endpoint;
                     console.log(endpoint);
@@ -179,7 +177,6 @@ firebase.auth().onAuthStateChanged(function(user) {
             swRegistration.pushManager.getSubscription()
                 .then(function(subscription) {
                     if (subscription) {
-                        // TODO: Tell application server to delete subscription
                         return subscription.unsubscribe();
                     }
                 })
