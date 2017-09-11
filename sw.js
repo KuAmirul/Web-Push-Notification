@@ -1,5 +1,8 @@
 'use strict';
 
+var text = [];
+var str=[];
+
 console.log('Service Worker Started', self);
 
 self.addEventListener('install', function(event) {
@@ -14,18 +17,24 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('push', function(event) {
     console.log('Service Worker received a push message', event.data.text());
 
-    var title = 'New Message From \sw.js';
-    event.waitUntil(
-        self.registration.showNotification(title, {
-            'body': event.data.text(),
-            'icon': 'images/icon.png'
-        }));
+    str = event.data.text();
+	text = str.substr(0,11);
+    
+  var title = 'New Alert From Helpdesk';
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      'body': event.data.text(),
+      'icon': 'images/icon.png',
+	  data: {
+        url: text // id for url
+		}	  
+    }));	
 });
 
 self.addEventListener('notificationclick', function(event) {
     console.log('Notification click: tag', event.notification.tag);
     event.notification.close();
-    var url = 'https://unimaptest.unimap.edu.my';
+    var url = 'https://unimaptest.unimap.edu.my/webpush/default.asp?n='+ event.notification.data.url;   //custom url
     event.waitUntil(
         clients.matchAll({
             type: 'window'
